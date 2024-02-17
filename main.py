@@ -84,8 +84,9 @@ def save_items():
 
 def save_trades():
     with open('trades.txt', 'w', encoding='utf-8') as file:
-        for item in trades.values():
-            file.write(str(item))
+        for trade in trades.values():
+            file.write(str(trade))
+            file.write('\n')
 
 
 def request_trade(message: dict):
@@ -181,7 +182,7 @@ def cmd_ad(args: list[str]):
         if len(entry.split(':')) != 2:
             print('貨幣與價錢格式不正確')
     display = ''
-    for index in range(4, len(args) - 1):
+    for index in range(4, len(args)):
         if len(display) != 0:
             display += ' '
         display += args[index]
