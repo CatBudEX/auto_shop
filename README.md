@@ -1,3 +1,5 @@
+**只能在"擁有者是自己"的領地才有效！**
+
 使用 Python 3 撰寫，需要下載一些前置依賴再執行：
 ```cmd
 pip install requests
